@@ -1,3 +1,5 @@
+package Chapter_2;
+
 public class TimeConverterFromSeconds
 {
     public static void main(String[] args)

@@ -1,3 +1,5 @@
+package Chapter_2;
+
 public class ReadInt
 {
     public static void main(String[] args)
