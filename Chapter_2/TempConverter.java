@@ -14,5 +14,7 @@ public class TempConverter
 
         System.out.println("Celsius Temperature: " + celsiusTemp);
         System.out.println("Fahrenheit Temperature: " + fahrenheitTemp);
+
+        System.out.println("Celsius Temperature: " + celsiusTemp);
     }
 }
