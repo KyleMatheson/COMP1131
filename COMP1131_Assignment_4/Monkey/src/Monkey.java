@@ -22,24 +22,25 @@ public class Monkey
 
     private String direction;
     private int location = 0;  //Monkey defaults to the middle unless jumpNewVine is called
-    private final String name;
+    private final String NAME;
 
     public Monkey (String name)
     {
-        this.name = name;
+        NAME = name;
     }
 
     // Service methods to control the monkey
     public String climb()
     {
-        if (location < TOP) {
+        if (location < TOP)
+        {
             location++;
             direction = "Climbed up";
-            return (name + " the Monkey " + direction + " to " + location);
+            return (NAME + " the Monkey " + direction + " to " + location);
         }
         else
         {
-            return (name + " the Monkey is at the top");
+            return (NAME + " the Monkey is at the top");
         }
     }
 
@@ -49,11 +50,11 @@ public class Monkey
         {
             location--;
             direction = "Climbed down";
-            return(name + " the Monkey " + direction + " to " + location);
+            return(NAME + " the Monkey " + direction + " to " + location);
         }
         else
         {
-            return (name + " the Monkey is at the bottom");
+            return (NAME + " the Monkey is at the bottom");
         }
     }
     // jumps the monkey to a new vine at a random location
@@ -61,13 +62,13 @@ public class Monkey
     {
         Random generator = new Random();
         location = generator.nextInt(BOTTOM, BOTTOM + TOP);
-        return(name + " the Monkey landed at " + location + " on the vine");
+        return(NAME + " the Monkey landed at " + location + " on the vine");
     }
 
     //provides a status update of the object state
     public String toString()
     {
-        return(name + " the Monkey " + direction + " to " + location);
+        return(NAME + " the Monkey last " + direction + " to " + location);
     }
 
 }

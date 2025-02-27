@@ -23,9 +23,22 @@ public class MonkeyDriver
         while (restart)
         {
             String status;
+            String response;
             System.out.print("Press 'u' to climb or 'd' to descend.('e' to exit):");
             Scanner scan = new Scanner(System.in);
-            String response = scan.nextLine().substring(0, 1);  //prevent multi char inputs
+            response = scan.nextLine();
+
+            // evaluates for a \n and responses with the status if true.
+            if (!response.isEmpty())
+
+            {
+                response = response.substring(0, 1);  //prevent multi char inputs
+            }
+            else
+            {
+                response = " "; // triggers default case
+            }
+
 
             // evaluate user input
             switch (response)
@@ -47,7 +60,7 @@ public class MonkeyDriver
                     restart = false;
                     break;
                 }
-                default:  //return status for any non-valid input case
+                default:  //return status for any non-valid response case
                 {
                     System.out.println(george);
                 }
