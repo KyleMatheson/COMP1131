@@ -3,38 +3,42 @@
 
  Kyle Matheson T00153296
  COMP1131 Assignment 4 Question 2
- A constructor with no parameters that creates a default 6-sided die.
+ This class contains two constructors:
+    1. A constructor with no parameters that creates a default 6-sided die.
 
- A constructor with one parameter that indicates how many faces the die is to have.
- Check that it is one of the permitted values, otherwise default to a 6-sided die.
+     2. A constructor with one parameter that indicates how many faces the die is to have and
+     checks that it is one of the permitted values, otherwise default to a 6-sided die.
 
- The roll() method given needs to be modified to work within the number of faces established by the constructors.
+ Service methods:
+    1. Die() create a Die obj with the passed parameters
 
- The setFaceValue() method needs to have logic added to ensure the new incoming face value is within the allowable limits
- for the number of faces.
+    2. roll() method rolls a die with the instantiated number of sides and stores the value.
 
- A second get_ method that retrieves the textual name of the current face value, such as One, Two, Three, etc.
- Note that a single method is expected that will work with any of the five regular dice.
+    3. setFaceValue(int) setter method for setting a value
 
- The toString() method should return both the numeric value and textual name for the current face value in a form like “1 : One”.
+    4. getFaceValue():int getter method to retrieve current die value.
 
- For your design, create a UML Class diagram similar to Figure 5.5 on page 180 of the textbook.
- Note that you need to include the constructors in the methods section.
+    5. getDieFaces(): int getter method to retrieve number of faces the die was instantiated with
 
- *********************************************************************************************************************/
+    6. getDieFacesStringValues: Str getter method to retrieve the number of faces the die was instanntiated with
+
+    7. toString(): Str getter for the numerical and teextual number
+
+*********************************************************************************************************************/
 
 
 public class Die
 {
     private int faceValue;
     private int faces;
-    private String[] strNumberArray = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+    private final String[] STRINGNUMBERARRAY = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
                                         "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen",
                                         "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"};
 
     public Die()
     {
         this.faces = 6;
+
         faceValue = 1;
 
     }
@@ -54,7 +58,7 @@ public class Die
             }
         }
 
-        faceValue = 1;
+        faceValue = 1;  //default to a valid roll
 
     }
 
@@ -77,18 +81,18 @@ public class Die
         return faceValue;
     }
 
-    public int getDiceFaces()
+    public int getDieFaces()
     {
         return faces;
     }
 
-    public String getFacesStringValue()
+    public String getDieFacesStringValue()
     {
-        return strNumberArray[faces];  // return the text value of the string array
+        return STRINGNUMBERARRAY[faces];  // return the text value of the string array
     }
 
     public String toString()
     {
-        return getFacesStringValue() + " : " + Integer.toString(faces);
+        return getDieFacesStringValue() + " : " + faces;
     }
 }
