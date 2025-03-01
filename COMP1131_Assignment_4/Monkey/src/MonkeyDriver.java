@@ -15,6 +15,14 @@ public class MonkeyDriver
     {
         boolean restart = true;  // loop handler
 
+        /* Test case for checking range
+        for (int i = 0; i <= 25; i++)
+        {
+            Monkey frank = new Monkey("Frank");
+            System.out.println(frank.jumpNewVine());
+        }
+        */
+        
         // create a new monkey named George and have him jump onto a vine.
         Monkey george = new Monkey("George");
         System.out.println(george.jumpNewVine());
@@ -68,3 +76,4 @@ public class MonkeyDriver
         }
     }
 }
+

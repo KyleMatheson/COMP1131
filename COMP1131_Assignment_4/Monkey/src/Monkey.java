@@ -61,7 +61,7 @@ public class Monkey
     public String jumpNewVine()
     {
         Random generator = new Random();
-        location = generator.nextInt(BOTTOM, BOTTOM + TOP);
+        location = generator.nextInt(BOTTOM, TOP + 1);
         return(NAME + " the Monkey landed at " + location + " on the vine");
     }
 
