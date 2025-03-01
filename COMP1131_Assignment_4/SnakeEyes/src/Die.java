@@ -86,13 +86,13 @@ public class Die
         return faces;
     }
 
-    public String getDieFacesStringValue()
+    public String getDieFacesStr()
     {
         return STRINGNUMBERARRAY[faces];  // return the text value of the string array
     }
 
     public String toString()
     {
-        return getDieFacesStringValue() + " : " + faces;
+        return getDieFacesStr() + " : " + faces;
     }
 }

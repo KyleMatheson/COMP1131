@@ -79,7 +79,7 @@ public class SnakeEyes
         }
 
         // Output results
-        System.out.println(rolls + " Rolls for " + die1.getDieFacesStringValue() + " faces");
+        System.out.println(rolls + " Rolls for " + die1.getDieFacesStr() + " faces");
         System.out.println("Number of Snake eyes: " + count);
         System.out.println("Ratio: " + (float)count/rolls);
         System.out.println();
