@@ -7,7 +7,7 @@
  An interactive test driver that instantiates a Monkey, then allows the user to manipulate it with simple commands
  like Output (to see the position and direction), Climb, Reverse, Exit ... single letters work just fine.
  *********************************************************************************************************************/
-import java.util.Scanner;
+
 
 public class MonkeyDriver
 {
