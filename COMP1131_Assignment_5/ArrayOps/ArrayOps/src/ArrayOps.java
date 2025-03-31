@@ -1,3 +1,13 @@
+/*********************************************************************************************************************
+ ArrayOps.java
+
+ Kyle Matheson T00153296
+ COMP1131 Assignment 5 Question 1
+
+ Create a class that returns values for Min, Max and Average from an array of ints that's size  is defined in
+ the instantiation of the object.  The values shall be from -size to +size with size being the defined size of the array.
+
+ *********************************************************************************************************************/
 import java.util.Random;
 
 public class ArrayOps
@@ -10,7 +20,8 @@ public class ArrayOps
         SIZE = size;
         ARRAY = new int[SIZE];
 
-        if (SIZE != 0)
+
+        if (SIZE > 0)  //check for valid input data
         {
             for (int i = 0; i <= SIZE - 1; i++) //populate the array with random integers from -size to size
             {
@@ -19,7 +30,9 @@ public class ArrayOps
             }
         }
     }
-    public int GetMin() //return the smallest int in the array[]
+
+    //return the smallest int in the array[]
+    public int GetMin()
     {
         int currentMin = SIZE;  //initialize the highest value possible
 
@@ -35,7 +48,8 @@ public class ArrayOps
         return currentMin;
     }
 
-    public int GetMax() //return the largest int in the array[]
+    //return the largest int in the array[]
+    public int GetMax()
     {
         int currentMax = SIZE * -1;  //initialize the lowest value possible
 
@@ -51,7 +65,8 @@ public class ArrayOps
         return currentMax;
     }
 
-    public float GetAverage()   //return the average of all the integers in the array[]
+    //return the average of all the integers in the array[]
+    public float GetAverage()
     {
         float total = 0;
         float average = 0;
@@ -65,11 +80,11 @@ public class ArrayOps
         return average;
     }
 
-
-    public String toString()    //return all the values of the array[]
+    //return all the values of the array[]
+    public String toString()
     {
         String valueList = "";
-        if (SIZE != 0)
+        if (SIZE != 0)  //if the user input was zero, the array was not defined.
         {
             for (int value : ARRAY)
             {
@@ -79,9 +94,7 @@ public class ArrayOps
         }
         else
         {
-            return "Array size cannot be zero";
+            return " Array size must be greater than zero";
         }
-
     }
-
 }
