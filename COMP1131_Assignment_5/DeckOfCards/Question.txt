@@ -1,0 +1,46 @@
+A standard playing card can be modelled with the following class, where the face values are
+1 thru 13 (being Ace thru King), and the suit values are 1 thru 4 (being Diamonds, Clubs, Hearts, Spades):
+
+public class Card {
+
+ private int face;
+
+ private int suit;
+
+ public Card (int f, int s) {
+
+  face = f;
+
+  suit = s;
+
+ }
+
+ public String toString() {
+
+  return face + “ of ” + suit;
+
+ }
+
+}
+
+Complete this design so that the toString() method returns a nice textual representation, e.g. Ace of Diamonds instead of 1 of 1.
+This logic should use arrays to provide a lookup of the appropriate text name.
+
+Use this completed class to design and implement a class called CardDeck that simulates a standard deck of playing cards.
+The design should store 52 objects of the Card class using a one-dimensional array.
+The constructor should populate the deck. Include methods to shuffle the deck, deal a card, return the number of cards left in the deck,
+and a toString to show the contents of the deck.
+
+Document your design with a UML Class diagram, that is to be submitted along with the testing exhibits.
+
+Create a separate driver class that first outputs the populated deck to prove it is complete, shuffles the deck,
+and then deals each card from a shuffled deck, displaying each card as it is dealt along with the number of cards left in the deck.
+
+Hint: The constructor for CardDeck should have two nested for loops for the face values (1 to 13) within the suit values (1 to 4)
+calling the Card constructor.
+
+The shuffle method does not have to simulate how a deck is physically shuffled; you can achieve the same effect by repeatedly swapping pairs of elements in the array with the indexes chosen at random.
+
+Testing: Include two complete runs to demonstrate the random effect of shuffling.
+
+(Ignore the text box below, your submission can be uploaded to the final question)
