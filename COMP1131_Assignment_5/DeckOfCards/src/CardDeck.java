@@ -1,12 +1,24 @@
+/*********************************************************************************************************************
+ CardDeck.java
+
+ Kyle Matheson T00153296
+ COMP1131 Assignment 5 Question 2
+
+ Class that builds a deck of cards from Card.java class.  Performs functions on the deck to allow it to be used.
+
+ *********************************************************************************************************************/
+
 import java.util.Random;
 
 public class CardDeck
 {
-    Card[] deck = new Card[52];
-    int topCard = 0;
+    Card[] deck;
+    int topCard = 0;    //iterator for counting remaining cards in the deck
 
-    public CardDeck()
+    //Constructor build a card deck with a variable number of cards in suit and number order.
+    public CardDeck(int numberOfDecks)
     {
+        deck = new Card[52 * numberOfDecks];
         int card = 0;
         for (int s = 1; s <= 4; s++)
         {
@@ -18,6 +30,7 @@ public class CardDeck
         }
     }
 
+    //shuffles the deck of cards with a random pairs of cards.
     public void Shuffle()
     {
         //This for defines the number of time a random pair of cards is swapped
@@ -34,6 +47,7 @@ public class CardDeck
         }
     }
 
+    // get method that deals a single card from the top of the deck.
     public String DealCard()
     {
         String response;
@@ -47,6 +61,7 @@ public class CardDeck
         return response;
     }
 
+    // get method that returns the number of cards left in the deck.
     public String CardsRemaining()
     {
         if (topCard >= 52) return "No remaining cards";
