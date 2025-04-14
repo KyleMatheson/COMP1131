@@ -3,29 +3,27 @@ import java.util.Scanner;
 
 public class PascalsTriangle
 {
-    public static void main (String[] args)
-    {
+    public static int[][] array;
+    private static int rows;
+
+    public static void main (String[] args) {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter the number of rows for your Pascal's Triangle:");
-        int rows = scan.nextInt();
+        rows = scan.nextInt();
 
-        int row;
-        int column;
-        for (row = 0; row < rows; row++)
-        {
-            for (column = 0; column <= row; column++)
-            {
-                int value = calc(row, column);
-                System.out.printf("(%d,%d) : %d)",row,column,value);
+        int[][] array = new int[rows + 2][rows + 2];
+
+        array[0][0] = 0;
+
+        int row = 0;
+        int column = 0;
+
+        for (row = 1; row <= rows; row++) {
+            for (column = 1; column <= row; column++) {
+                System.out.printf("(%d,%d) : %d)", row, column, array[row][column]);
             }
         }
-
-
-    }
-
-    private static int calc(int r, int c)
-    {
-        return 1;
     }
 }
+
