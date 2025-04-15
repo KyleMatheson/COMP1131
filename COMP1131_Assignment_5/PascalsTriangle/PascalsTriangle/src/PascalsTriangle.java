@@ -1,3 +1,12 @@
+/*********************************************************************************************************************
+ PascalsTriangle.java
+
+ Kyle Matheson T00153296
+ COMP1131 Assignment 5 Question 3
+
+ Determine and print up to the Nth line of Pascal’s Triangle
+
+ *********************************************************************************************************************/
 import java.util.Scanner;
 
 public class PascalsTriangle
